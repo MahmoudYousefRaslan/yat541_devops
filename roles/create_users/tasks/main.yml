@@ -1,0 +1,11 @@
+---
+# tasks file for create_users
+- name: create Users
+  user: 
+    name: "{{item}}"
+  with_items: 
+    - salma
+    - mohammed
+  notify: 
+    - get the last users
+    - display the users
