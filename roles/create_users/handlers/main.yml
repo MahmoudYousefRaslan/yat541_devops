@@ -1,0 +1,9 @@
+---
+# handlers file for create_users
+- name: get the last users
+  command: tail -2 /etc/passwd
+  register: last_users
+
+- name: display the users
+  ansible.builtin.debug: 
+    msg: "{{last_users}}"

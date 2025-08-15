@@ -1,0 +1,4 @@
+- name: create users play book
+  hosts: ubuntu1, centos1 
+  become: true
+  roles: create_users
